@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Made By Nythriss</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            background: transparent;
+        }
+
+        .cam {
+            position: fixed;
+            top: 6%;
+            right: 5%;
+            width: 500px;
+            aspect-ratio: 16 / 9;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+            border-radius: 8px;
+            overflow: visible;
+        }
+
+        .cam::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .chat {
+            position: fixed;
+            bottom: 50px;
+            right: 5%;
+            width: 500px;
+            height: 650px;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+            border-radius: 8px;
+            overflow: visible;
+            background-color: #000;
+        }
+
+        .chat::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .chatnametag {
+            font-family: "Satisfy", cursive;
+            font-weight: 800;
+            font-size: 7rem;
+            position: absolute;
+            bottom: -5.5rem;
+            right: -30px;
+            transform: translate(-50%, 50%);
+            z-index: 2;
+            color: #D13A78;
+            text-shadow: black 10px 10px 20px;
+            -webkit-text-stroke: 0.1px black;
+            text-stroke: 0.1px black;
+        }
+
+        .nametag {
+            font-family: "Satisfy", cursive;
+            font-weight: 800;
+            font-size: 5rem;
+            position: absolute;
+            bottom: -3.5rem;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            z-index: 2;
+            color: #D13A78;
+            text-shadow: black 10px 10px 20px;
+            -webkit-text-stroke: 0.1px black;
+            text-stroke: 0.1px black;
+        }
+
+        .cam2 {
+            position: fixed;
+            top: 17.5%;
+            left: 2.5%;
+            width: 1250px;
+            aspect-ratio: 16 / 9;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+            border-radius: 8px;
+            overflow: visible;
+        }
+
+        .cam2::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
+            
+        }
+
+        .user-banner {
+            position: absolute;
+            bottom: 50px;
+            left: 10%;
+            background-color: transparent;
+            padding: 10px 30px;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            border-radius: 10px;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner img {
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner2 {
+            position: absolute;
+            top: 50px;
+            left: 25%;
+            background-color: transparent;
+            padding: 10px 30px;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            border-radius: 10px;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-banner2 img {
+            background-color: red;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+        }
+
+        .user-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-group img {
+            height: 75px;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        .username,
+        .invite-text {
+            color: #D13A78;
+            font-family: "Satisfy", cursive;
+            font-weight: 800;
+            font-size: 3rem;
+            text-shadow: black 10px 10px 20px;
+            -webkit-text-stroke: 0.1px black;
+            text-stroke: 0.1px black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="cam">
+        <h2 class="nametag">Anima</h2>
+    </div>
+    <div class="chat">
+        <h2 class="chatnametag">Chat</h2>
+    </div>
+    <div class="cam2"></div>
+    <div class="user-banner">
+        <!-- X Section -->
+        <div class="user-group">
+            <img src="images/x.jpg" alt="X Logo" style="border-radius: 50%;">
+            <span class="username">@AnimasCall</span>
+        </div>
+
+        <!-- Discord Section -->
+        <div class="user-group">
+            <img src="images/discord.png" alt="Discord Logo">
+            <span class="invite-text">discord.gg/ZPRFxrAjGf</span>
+        </div>
+    </div>
+
+    <div class="user-banner2">
+        <div class="user-group">
+            <img src="images/youtube.png" alt="Discord Logo">
+            <span class="invite-text">@AnimaCalls</span>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+<!--
+© 2025 Nythriss. All Rights Reserved ❤️
+
+This content is published in Germany. If you’d like to copy, share, or modify
+any part of it, please send a quick message via Twitch: https://twitch.tv/nythriss or Instagram: https://www.instagram.com/nythriss .
+Thank you for respecting my work! 🌑🖤
+-->
+
+</html>

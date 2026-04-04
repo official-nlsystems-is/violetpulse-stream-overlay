@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anima's 16:9 | Made By Nythriss</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            background: transparent;
+        }
+
+        .cam {
+            position: fixed;
+            top: 50px;
+            left: 12.5%;
+            width: 800px;
+            aspect-ratio: 16 / 9;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+            border-radius: 8px;
+            overflow: visible;
+        }
+
+        .cam::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .chat {
+            position: fixed;
+            bottom: 60px;
+            right: 35px;
+            width: 550px;
+            aspect-ratio: 9 / 16;
+            filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
+            border-radius: 8px;
+            overflow: visible;
+            background-color: #000;
+        }
+
+        .chat::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            padding: 8px;
+            background: linear-gradient(135deg,
+                    #6a00a8,
+                    #7020ff,
+                    #52008a,
+                    #006aff,
+                    #007eff,
+                    #8b00c9,
+                    #00aaff);
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+        .chatnametag {
+            font-family: "Satisfy", cursive;
+            font-weight: 800;
+            font-size: 7rem;
+            position: absolute;
+            bottom: -5.5rem;
+            right: -30px;
+            transform: translate(-50%, 50%);
+            z-index: 2;
+            color: #D13A78;
+            text-shadow: black 10px 10px 20px;
+            -webkit-text-stroke: 0.1px black;
+            text-stroke: 0.1px black;
+        }
+
+        .bg {
+            position: fixed;
+            top: 56%;
+            left: 5%;
+            width: 1100px;
+            height: 350px;
+            background: url(images/BG.svg) no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+            border-radius: 150px;
+            overflow: hidden;
+        }
+
+        .bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .chatnametag_centered {
+            font-family: "Source Sans 3", sans-serif;
+            font-weight: 900;
+            font-size: 8rem;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.85);
+            z-index: 2;
+            color: #FB8A00;
+            text-shadow: black 10px 10px 20px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <h2 class="chatnametag_centered">BE RIGHT BACK</h2>
+        <div class="cam"></div>
+    </div>
+    <div class="chat">
+        <h2 class="chatnametag">Chat</h2>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+<!--
+© 2025 Nythriss. All Rights Reserved ❤️
+
+This content is published in Germany. If you’d like to copy, share, or modify
+any part of it, please send a quick message via Twitch: https://twitch.tv/nythriss or Instagram: https://www.instagram.com/nythriss .
+Thank you for respecting my work! 🌑🖤
+-->
+
+</html>
